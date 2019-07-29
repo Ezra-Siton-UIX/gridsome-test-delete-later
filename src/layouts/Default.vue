@@ -1,50 +1,69 @@
 <template>
-  <div class="layout">
-    <header class="header">
-      <strong>
-        <g-link to="/">{{ $static.metaData.siteName }}</g-link>
-      </strong>
-      <nav class="nav">
-        <g-link class="nav__link" to="/">Home</g-link>
-        <g-link class="nav__link" to="/about">About</g-link>
-      </nav>
-    </header>
-    <slot/>
-  </div>
+<div id="app" data-id="wow">
+  <navbar v-if="sidebar" :footer="true" />
+  <transition name="fade" appear>
+    <div>
+      <slot />
+    </div>
+  </transition>
+
+  <footerg v-if="footer" />
+</div>
 </template>
 
-<static-query>
-query {
-  metaData {
-    siteName
+<script>
+import navbar from '~/components/navbar.vue'
+
+export default {
+  props: [
+    'sidebar',
+    'footer',
+    'postTitle'
+  ],
+  components: {
+    navbar
   }
 }
-</static-query>
+</script>
 
 <style>
-body {
-  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-  margin:0;
-  padding:0;
-  line-height: 1.5;
+.fade-enter-active {
+  transition: opacity .5s;
 }
 
-.layout {
-  max-width: 760px;
-  margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
+.fade-enter {
+  opacity: 0;
 }
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-  height: 80px;
+a.active--exact.active,
+a.active--exact.active:hover {
+
+  color: #1e87f0;
 }
 
-.nav__link {
-  margin-left: 20px;
+.uk-h1,
+.uk-h2,
+.uk-h3,
+.uk-h4,
+.uk-h5,
+.uk-h6,
+.uk-heading-2xlarge,
+.uk-heading-large,
+.uk-heading-medium,
+.uk-heading-small,
+.uk-heading-xlarge,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+html,
+body,
+a.nav__link {
+  font-family: 'Open Sans', sans-serif !important;
+  font-family: 'Maven Pro', sans-serif !important;
+
+
 }
 </style>
