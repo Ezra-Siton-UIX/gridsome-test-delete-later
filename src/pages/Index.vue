@@ -230,7 +230,6 @@ export default {
   display:none;
 }
 
-
     .wrap::before {
       position: absolute;
       height: 100vh;

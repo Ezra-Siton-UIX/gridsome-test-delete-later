@@ -2,7 +2,7 @@
 <Layout :sidebar="true" :footer="true">
   <!--working-->
   <main class="uk-height-1-1 uk-cover-container ">
-    <div id="a" class="uk-cover-container uk-position-relative uk-light uk-flex uk-flex-middle top-wrap-height">
+    <header id="a" class="uk-cover-container uk-position-relative uk-light uk-flex uk-flex-middle top-wrap-height">
       <!-- TOP CONTAINER -->
       <div class="uk-container uk-container-large uk-flex-auto top-container uk-position-relative uk-margin-medium-top" data-uk-parallax="y: 0,50; easing:0; opacity:0.2">
         <div class="uk-width-1-2@s" data-uk-scrollspy="cls: uk-animation-slide-right-medium; target: > *; delay: 150">
@@ -27,7 +27,7 @@
         <a href="#main" data-uk-scroll="duration: 500" data-uk-icon="icon: arrow-down; ratio: 2" class="uk-margin-bottom"></a>
       </div>
 
-    </div>
+    </header>
     <!-- /TOP -->
 
     <section id="main" class="uk-section uk-section-default uk-padding-remove-top">
@@ -272,19 +272,49 @@
     <!-- /LOGOS -->
 
 
+    <template>
+      <carousel :autoplay="true">
+        <slide>
+          Slide 1 Content
+        </slide>
+        <slide>
+          Slide 2 Content
+        </slide>
+        <slide>
+          Slide 3 Content
+        </slide>
+      </carousel>
+    </template>
+
+    <h1>time</h1>
+    <h1 v-text="theTime">
+     </h1>
 
 
   </main>
 </Layout>
 </template>
 
+
+
 <script>
+import moment from 'moment';
+import {Carousel,Slide} from 'vue-carousel'
+
 export default {
   data: function () {
     return {
       postTitle: "hello world"
     }
   },
+  components: {
+   Carousel,
+   Slide
+ },
+ mounted() {
+  console.log("hello-world")
+},
+
   metaInfo: {
     title: 'About us',
     meta: [{

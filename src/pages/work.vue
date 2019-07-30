@@ -1,10 +1,12 @@
 <template>
 <Layout :sidebar="true" :footer="true" class="container">
 
+
+
   <header class="uk-section  uk-section-secondary uk-position-relative">
     <div class="uk-container uk-container-small uk-text-center">
       <h1 class="uk-margin-top">Our Works</h1>
-      <p class="uk-text-large">This is a text that describes the album, its creator.</p>
+      <p class="uk-text-l3arge">This is a text that describes the album, its creator.</p>
       <!-- arrow bottom -->
       <div class="uk-position-z-index uk-text-center uk-position-bottom">
         <a href="#main" data-uk-scroll="duration: 500" data-uk-icon="icon: arrow-down; ratio: 2" class="uk-margin-bottom"></a>
@@ -18,7 +20,7 @@
   <main id="main" class="uk-section uk-section-muted uk-padding-remove-top">
     <div class="uk-container">
 
-
+      <!-- breadcrumb -->
       <nav class="uk-section-muted uk-margin-bottom">
         <div class="uk-container uk-padding-small">
           <ul class="uk-breadcrumb">
@@ -26,12 +28,6 @@
               <g-link to="/">Home</g-link>
             </li>
             <li class="uk-disabled"><a>Work</a></li>
-
-
-
-
-
-
           </ul>
         </div>
       </nav>

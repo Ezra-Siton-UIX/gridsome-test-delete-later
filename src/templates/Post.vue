@@ -17,15 +17,11 @@
     <span> Back</span>
   </a>
 
-
-
-
-  <hgroup class="post uk-position-top">
-
+  <div class="post uk-position-top">
     <!-- overlay -->
     <a @click="$router.go(-1)" title="Back" class="uk-link-reset uk-position-cover" style="z-index:0; position:fixed; cursor: zoom-out; background:#f8f8f8"></a>
 
-    <!-- content -->
+    <!-- breadcrumb -->
     <nav class="uk-container uk-container-small uk-section uk-section-xsmall uk-position-relative uk-position-z-index" style="z-index:15;">
       <ul class="uk-breadcrumb">
         <li>
@@ -70,13 +66,12 @@
             <td class="uk-table-expand">
               <g-image width="20" alt="webflow icon" src="~/assets/images/webflow-icon.png" /> <span style="line-height:1;position:relative;top:1px; left:3px;"> Webflow</span></td>
           </tr>
-
         </tbody>
       </table>
     </header>
 
     <!-- content -->
-    <main style="max-width:1000px;" class="uk-container uk-position-z-index uk-position-relative uk-margin-top">
+    <main id="work-main" style="max-width:1000px;" class="uk-container uk-position-z-index uk-position-relative uk-margin-top">
       <a @click="$router.go(-1)" style="cursor: zoom-out;">
         <g-image quality="100" fit="contain" src="~/assets/images/browser-top.png" />
         <g-image quality="100" :src="$page.post.image" />
@@ -87,7 +82,7 @@
         </a>
       </div>
     </main>
-  </hgroup>
+  </div>
 </layout>
 </template>
 
@@ -120,18 +115,24 @@ query queryName ($path: String!){
 }
 </page-query>
 
-<style scoped>
+<style>
 .post-title {
   padding: calc(var(--space) / 2) 0 calc(var(--space) / 2);
   text-align: center;
 }
 
-img img.shadow{
+img.shadow, #work-main img{
   box-shadow: 0 2px 8px rgba(0, 0, 0, .11);
-    border: 1px solid #021a40 !important;
+    border: 1px solid #ececec;
 }
 
-p img {
-  border: 1px solid #021a40 !important;
-}
+
+
+
+
 </style>
+
+<script>
+alert("hello");
+
+</script>
