@@ -4,6 +4,9 @@
 
 
 
+
+
+
   <a @click="$router.go(-1)" class="uk-padding" style="z-index: 980;" uk-sticky="show-on-up: true; animation: uk-animation-slide-top; bottom: #bottom">
 
     <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 64 64">
@@ -18,6 +21,10 @@
   </a>
 
   <div class="post uk-position-top">
+
+
+
+
     <!-- overlay -->
     <a @click="$router.go(-1)" title="Back" class="uk-link-reset uk-position-cover" style="z-index:0; position:fixed; cursor: zoom-out; background:#f8f8f8"></a>
 
@@ -35,6 +42,12 @@
     </nav>
 
     <header class="uk-container uk-container-small  uk-position-relative uk-position-z-index">
+
+      <b>hello:</b>
+      <g-link v-for="tag in $page.post.tags">
+                  {{tag}}
+    </g-link>
+
 
       <!-- INFO -->
       <div class="uk-section uk-section-xsmall">
@@ -111,6 +124,7 @@ query queryName ($path: String!){
     content
     image
     website
+    tags
   }
 }
 </page-query>
@@ -131,8 +145,3 @@ img.shadow, #work-main img{
 
 
 </style>
-
-<script>
-alert("hello");
-
-</script>
