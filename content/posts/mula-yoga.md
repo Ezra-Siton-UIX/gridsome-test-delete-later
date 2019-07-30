@@ -9,7 +9,7 @@ tags: ['Markdown', 'Cover Image']
 
 <h2 class="uk-heading-line"><span>About Page</span></h2>
 
-![about Page](./images/mula/2_about.png)
+![about Page](./images/mula/about.png)
 
 <h2 class="uk-heading-line"><span>Product Page</span></h2>
 
