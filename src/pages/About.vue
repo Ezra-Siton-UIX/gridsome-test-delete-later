@@ -288,10 +288,6 @@ export default {
       postTitle: "hello world"
     }
   },
-  components: {
-   Carousel,
-   Slide
- },
  mounted() {
   console.log("hello-world")
 },
