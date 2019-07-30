@@ -46,14 +46,11 @@
 
    </section>
 
-      <div class="uk-grid uk-grid-medium uk-child-width-1-2 uk-child-width-1-2@m uk-child-width-1-3@l uk-grid-match"
-
+      <ul class="uk-grid uk-grid-small uk-child-width-1-2 uk-child-width-1-2@m uk-child-width-1-3@l uk-grid-match"
       v-bind:class="{ 'i-am-active': button_active_state }"
-
-      data-uk-lightbox="toggle:a.uk-position-cover" data-uk-grid="masonry: true">
+      data-uk-lightbox="toggle:a.uk-position-cover" data-uk-grid="masonry: true"  style="list-style-type: none;">
         <!-- item -->
-        <ul class="uk-inline" v-for="edge in $page.posts.edges" :key="edge.node.id" style="list-style-type: none;">
-          <li>
+          <li class="work-card uk-inline" v-for="edge in $page.posts.edges" :key="edge.node.id">
             <g-link :to="edge.node.path" class=" uk-link-reset" title="View Project">
               <div class="uk-card uk-card-default uk-card-small">
                 <g-image class="uk-position-top uk-position-z-index" quality="100" fit="contain" src="~/assets/images/browser-top.png" />
@@ -78,8 +75,7 @@
               </div>
             </g-link>
           </li>
-        </ul>
-      </div>
+      </ul>
     </div>
   </main>
   <!-- /CONTENT -->
@@ -179,6 +175,14 @@ export default {
 </script>
 
 <style>
+@media only screen and (max-width: 600px) {
+  .work-card, .uk-grid-small>* {
+      padding-left: 5px!important;
+  }
+}
+
+
+
 time:hover{
   text-decoration: none;
 }
