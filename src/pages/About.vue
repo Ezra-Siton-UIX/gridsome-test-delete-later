@@ -272,24 +272,6 @@
     <!-- /LOGOS -->
 
 
-    <template>
-      <carousel :autoplay="true">
-        <slide>
-          Slide 1 Content
-        </slide>
-        <slide>
-          Slide 2 Content
-        </slide>
-        <slide>
-          Slide 3 Content
-        </slide>
-      </carousel>
-    </template>
-
-    <h1>time</h1>
-    <h1 v-text="theTime">
-     </h1>
-
 
   </main>
 </Layout>
@@ -298,8 +280,7 @@
 
 
 <script>
-import moment from 'moment';
-import {Carousel,Slide} from 'vue-carousel'
+
 
 export default {
   data: function () {
