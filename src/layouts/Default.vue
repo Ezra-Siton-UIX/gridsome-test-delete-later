@@ -14,6 +14,9 @@
 import navbar from '~/components/navbar.vue'
 
 export default {
+  metaInfo: {
+      titleTemplate: '%s | Swipe! Studio',
+    },
   props: [
     'sidebar',
     'footer',

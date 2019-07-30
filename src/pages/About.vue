@@ -291,7 +291,6 @@ export default {
  mounted() {
   console.log("hello-world")
 },
-
   metaInfo: {
     title: 'About us',
     meta: [{

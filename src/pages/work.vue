@@ -175,11 +175,7 @@ export default {
 </script>
 
 <style>
-@media only screen and (max-width: 600px) {
-  .work-card, .uk-grid-small>* {
-      padding-left: 5px!important;
-  }
-}
+
 
 
 
