@@ -43,8 +43,7 @@
 
     <header class="uk-container uk-container-small  uk-position-relative uk-position-z-index">
 
-      <b>hello:</b>
-      <g-link v-for="tag in $page.post.tags">
+      <g-link v-for="tag in $page.post.tags" style="display:none;">
                   {{tag}}
     </g-link>
 
@@ -72,7 +71,7 @@
       <!-- /INFO -->
 
       <!-- if "view website" אם יש לי לינק לאתר -->
-      <table class="uk-table uk-table-middle" v-if="$page.post.website">
+      <table class="uk-table uk-table-middle uk-hidden" v-if="$page.post.website">
         <tbody>
           <tr>
             <td class="uk-table-shrink">Technology:</td>
