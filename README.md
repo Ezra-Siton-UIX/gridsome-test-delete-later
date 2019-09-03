@@ -1,6 +1,6 @@
 # Default starter for Gridsome wowowowowowo
 
-This is the project you get when you run `gridsome create new-project`.
+This is the project you get when you run `gridsome create new-project`. 222222222
 
 ### 1. Install Gridsome CLI tool if you don't have
 
