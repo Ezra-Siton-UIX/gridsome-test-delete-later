@@ -4,7 +4,7 @@ This is the project you get when you run `gridsome create new-project`.
 
 ### 1. Install Gridsome CLI tool if you don't have
 
-`npm install --global @gridsome/cli`
+`npm install --global @gridsome/cli` hello world
 
 ### 2. Create a Gridsome project
 
